@@ -1,7 +1,9 @@
 package hu.varghamarkpeter.wadb;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -89,6 +91,10 @@ public class MainActivity extends Activity {
                 break;
             case R.id.main_toggleButtonStartStopOnBoot:
                 this.appPreferences.setStartWirelessAdbOnBoot(toggleButtonStartStopOnBoot.isChecked());
+                break;
+            case R.id.main_textViewAbout:
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/vargham/wadb/"));
+                startActivity(intent);
                 break;
         }
     }

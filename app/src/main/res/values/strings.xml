@@ -4,7 +4,7 @@
     <string name="checking_root">Checking root access…</string>
     <string name="no_root">No root access.</string>
     <string name="root">Root access available.</string>
-    <string name="about">Mark Peter Vargha\nvarghamarkpeter.hu\nvmp@varghamarkpeter.hu</string>
+    <string name="about">Mark Peter Vargha\nvarghamarkpeter.hu\nvmp@varghamarkpeter.hu\nhttps://github.com/vargham/wadb/</string>
     <string name="wifi_adb_enabled">Wireless ADB enabled</string>
     <string name="wifi_adb_disabled">Wireless ADB disabled</string>
     <string name="on_boot_wifi_adb_enabled">On boot wireless ADB enabled</string>

@@ -109,6 +109,8 @@
 
     <TextView
         android:id="@+id/main_textViewAbout"
+        android:clickable="true"
+        android:onClick="onClick"
         android:padding="16dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
