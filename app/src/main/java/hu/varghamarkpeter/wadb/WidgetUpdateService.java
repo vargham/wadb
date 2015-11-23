@@ -28,7 +28,6 @@ public class WidgetUpdateService extends Service implements WirelessAdb.WorkFini
 
     @Override
     public void onWorkFinished(WirelessAdb wirelessAdb) {
-        Log.d("WADB", "on work finished");
         WadbWidgetProvider.displayState(this, getActualStateMessage(wirelessAdb));
     }
 

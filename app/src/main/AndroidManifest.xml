@@ -10,6 +10,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:installLocation="internalOnly"
         android:theme="@style/AppTheme" >
         <activity android:name=".MainActivity" >
             <intent-filter>
@@ -22,9 +23,14 @@
             android:icon="@mipmap/ic_launcher"
             android:label="ADB WiFi widget updater" />
 
+        <service android:name=".BackgroundIntentService"
+            android:icon="@mipmap/ic_launcher"
+            android:label="On boot action handler" />
+
         <receiver
-            android:name=".BootReceiver"
+            android:name="hu.varghamarkpeter.wadb.BootReceiver"
             android:enabled="true"
+            android:exported="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
