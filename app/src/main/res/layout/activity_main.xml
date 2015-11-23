@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/main_textViewTitle"
+        android:layout_margin="0dp"
+        android:padding="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FFFFFFFF"
+        android:text="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/groupNoRoot"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/main_textViewRoot"
+            android:padding="16dp"
+            android:textColor="#FF000000"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:fontFamily="monospace"
+            android:textSize="20sp"
+            android:text="@string/checking_root" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/groupRoot"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/main_textViewData"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:textColor="#FF000000"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:fontFamily="monospace"
+            android:textSize="20sp"
+            android:text="IP:PORT" />
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/main_textViewIp"
+                android:paddingBottom="2dp"
+                android:textColor="#FF000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="monospace"
+                android:textSize="20sp"
+                android:text="IP:" />
+
+            <EditText
+                android:id="@+id/main_editTextPort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:fontFamily="monospace"
+                android:textSize="22sp"
+                android:hint="PORT"/>
+
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/main_toggleButtonStartStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:textOff="@string/wifi_adb_disabled"
+            android:textOn="@string/wifi_adb_enabled" />
+
+        <ToggleButton
+            android:id="@+id/main_toggleButtonStartStopOnBoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:textOff="@string/on_boot_wifi_adb_disabled"
+            android:textOn="@string/on_boot_wifi_adb_enabled" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/main_textViewAbout"
+        android:padding="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:fontFamily="monospace"
+        android:textColor="#FFCCCCCC"
+        android:textSize="14sp"
+        android:text="@string/about" />
+
+</LinearLayout>
+
