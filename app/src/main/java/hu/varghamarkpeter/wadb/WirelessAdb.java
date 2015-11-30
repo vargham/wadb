@@ -1,5 +1,7 @@
 package hu.varghamarkpeter.wadb;
 
+import android.provider.Settings;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +11,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import eu.chainfire.libsuperuser.Shell;
 
 /**
- *
+ * TODO Check USB ADB and turn it on.
  * <p/>
  * @author <a href="mailto:vmp@varghamarkpeter.hu">Mark Peter Vargha</a>
  */
@@ -19,6 +21,7 @@ public final class WirelessAdb {
     private final static int PORT_WADB_OFF = -1;
     private final static String CMD_SET_ADB_PORT = "setprop service.adb.tcp.port";
     private final static String CMD_GET_ADB_PORT = "getprop service.adb.tcp.port";
+    private final static String CMD_SET_USB_DEBUG_ENABLED = "setprop persist.sys.usb.config adb";
     private final static String CMD_STOP_ADBD = "stop adbd";
     private final static String CMD_START_ADBD = "start adbd";
 
@@ -138,6 +141,7 @@ public final class WirelessAdb {
     /* WORKER */
 
     private void writePort(int port) {
+        //int adb = Settings.Secure.getInt(context.getContentResolver(), Settings.Secure.ADB_ENABLED, 0);
         this.portCurrent = runCommandsForIntResult(CMD_SET_ADB_PORT + " " + port, CMD_STOP_ADBD, CMD_START_ADBD, CMD_GET_ADB_PORT);
         checkState();
     }

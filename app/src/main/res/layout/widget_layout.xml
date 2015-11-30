@@ -16,6 +16,10 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textColor="#FF00FF00"
+        android:shadowColor="#FF00FF00"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
         android:fontFamily="monospace"
         android:textSize="16sp"
         android:text="@string/widget_working"/>
