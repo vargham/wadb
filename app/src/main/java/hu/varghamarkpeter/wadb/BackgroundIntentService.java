@@ -11,10 +11,9 @@ import android.widget.Toast;
 import static hu.varghamarkpeter.wadb.Utils.*;
 
 /**
- * <p/>
- * NowTechnologies Zrt. 2013-2015
  *
- * @author <a href="mailto:vmp@nowtech.hu">Mark Peter Vargha</a>
+ * <p/>
+ * @author <a href="mailto:vmp@varghamarkpeter.hu">Mark Peter Vargha</a>
  */
 public class BackgroundIntentService extends IntentService implements WirelessAdb.WorkFinishedListener {
 
